@@ -16,6 +16,7 @@
   src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
   crossorigin="anonymous"></script>
+<script src='cal.js'></script>
 
 <script>
   $(function() {
@@ -36,7 +37,9 @@
   });
   //end timedropper
   $(document).ready(function() {
-
+    FullCalendar.insert('ss', '2018-03-12', '2018-03-13');
+    FullCalendar.show('#calendar');
+	/*
     $('#calendar').fullCalendar({
       header: {
         left: 'prev,next today',
@@ -86,6 +89,7 @@
           title: 'Meeting',
           start: '2018-03-12T10:30:00',
           end: '2018-03-12T12:30:00'
+    var fullCalendar = FullCalander;
         },
         {
           title: 'Meeting',
@@ -126,7 +130,7 @@
         }
       ]
     });
-
+	*/
   });
 
 </script>
