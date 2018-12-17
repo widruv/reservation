@@ -9,10 +9,32 @@
 <script src='fullcalendar-3.9.0/lib/moment.min.js'></script>
 <script src='fullcalendar-3.9.0/lib/jquery.min.js'></script>
 <script src='fullcalendar-3.9.0/fullcalendar.min.js'></script>
-
+<script src="timedropper-master/timedropper.js"></script>
+<link rel="stylesheet" type="text/css" href="timedropper-master/timedropper.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
 
 <script>
-
+  $(function() {
+    $('#input_reservation_date').datepicker({
+      dateFormat: 'yy-mm-dd'
+    });
+  });
+  //timedropper
+  $(function() {
+    $('#input_reservation_start_time').timeDropper({
+            format: 'HH:mm a',
+            setCurrentTime: false
+            });
+    $('#input_reservation_end_time').timeDropper({
+            format: 'HH:mm a',
+            setCurrentTime: false
+            });
+  });
+  //end timedropper
   $(document).ready(function() {
 
     $('#calendar').fullCalendar({
@@ -54,6 +76,27 @@
           title: 'Meeting',
           start: '2018-03-12T10:30:00',
           end: '2018-03-12T12:30:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T10:30:00',
+          end: '2018-03-12T12:30:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T10:30:00',
+          end: '2018-03-12T12:30:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T10:30:00',
+          end: '2018-03-12T12:30:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T10:30:00',
+          end: '2018-03-12T12:30:00',
+          color: 'red'
         },
         {
           title: 'Lunch',
@@ -106,6 +149,52 @@
 <body>
 
   <div id='calendar'></div>
-
+  <div id="reservation_form" style="text-align:center;">
+      <FORM METHOD="POST" ACTION="http://example.com/something.php">
+        <TABLE BORDER="1" style="margin:0 auto;width:500px;">
+      <TR>
+        <TD>강의실</TD>
+        <TD>
+          <select>
+            <option value="1">1강의실</option>
+            <option value="2">2강의실</option>
+            <option value="3">3강의실</option>
+            <option value="4">4강의실</option>
+            <option value="5">5강의실</option>
+            <option value="6">6강의실</option>
+            <option value="7">7강의실</option>
+          </select>
+        </TD>
+      </TR>
+      <TR>
+        <TD>예약일자</TD>
+        <TD><INPUT id="input_reservation_date" TYPE="TEXT" NAME="date" SIZE="25"></TD>
+      </TR>
+          <TR>
+        <TD>예약시작시간</TD>
+        <TD><INPUT id="input_reservation_start_time" TYPE="TEXT" NAME="start_time" SIZE="25"></TD>
+      </TR>
+          <TR>
+        <TD>예약종료시간</TD>
+        <TD><INPUT id="input_reservation_end_time" TYPE="TEXT" NAME="end_time" SIZE="25"></TD>
+      </TR>
+          <TR>
+        <TD>예약자</TD>
+        <TD><INPUT TYPE="TEXT" NAME="name" SIZE="25"></TD>
+      </TR>
+          <TR>
+        <TD>예약내용</TD>
+        <TD><INPUT TYPE="TEXT" NAME="details" SIZE="25"></TD>
+      </TR>
+          <TR>
+        <TD>비밀번호</TD>
+        <TD><INPUT TYPE="TEXT" NAME="password" SIZE="25"></TD>
+      </TR>
+        </TABLE>
+        <P>
+          <INPUT TYPE="SUBMIT" VALUE="Submit" NAME="B1">
+        </P>
+      </FORM>
+  </div>
 </body>
 </html>

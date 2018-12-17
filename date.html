@@ -12,9 +12,9 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
-    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>  
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
     <script src="dist/scripts/timetable.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/timepicker@1.11.14/jquery.timepicker.js"></script>
     <script src="timedropper-master/timedropper.js"></script>
@@ -54,15 +54,15 @@
     <div class="timetable"></div>
     <script>
       var timetable = new Timetable();
-      timetable.setScope(9,0);
+      timetable.setScope(6,0);
 	  var options = {
 		url: '#',
 		class: 'vip',
-	 	data: { 
+	 	data: {
 			id: 4,
 			ticketType: 'VIP'
 		},
-		onClick: function(event, timetable, clickEvent) {} 
+		onClick: function(event, timetable, clickEvent) {}
 	  };
       timetable.addLocations(['Rotterdam', 'Madrid', 'Los Angeles', 'London', 'New York', 'Jakarta', 'Tokyo']);
 
@@ -78,7 +78,7 @@
       var renderer = new Timetable.Renderer(timetable);
       renderer.draw('.timetable');
     </script>
-    
+
     <div id="datepicker"></div>
     <p>Date: <input type="text" id="datepicker2" disabled></p>
 
@@ -115,7 +115,7 @@
     			<TD>비밀번호</TD>
     			<TD><INPUT TYPE="TEXT" NAME="password" SIZE="25"></TD>
     		</TR>
-    
+
     	    </TABLE>
     	    <P>
 		        <INPUT TYPE="SUBMIT" VALUE="Submit" NAME="B1">
@@ -124,4 +124,3 @@
 	</div>
     </body>
 </html>
-
