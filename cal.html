@@ -17,6 +17,7 @@
   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
   crossorigin="anonymous"></script>
 <script src='cal.js'></script>
+<script src='events.js'></script>
 
 <script>
   $(function() {
@@ -37,7 +38,8 @@
   });
   //end timedropper
   $(document).ready(function() {
-    FullCalendar.insert('ss', '2018-03-12', '2018-03-13');
+    //FullCalendar.insert('ss', '2018-03-12', '2018-03-13');
+    FullCalendar.set(EVENTS);
     FullCalendar.show('#calendar');
 	/*
     $('#calendar').fullCalendar({

@@ -1,5 +1,8 @@
 var FullCalendar = {
     lists : [],
+    set:function(events) {
+        this.lists = events;
+    },
     insert:function(title, start, end, color='blue') {
         this.lists.push({
             title: title,
