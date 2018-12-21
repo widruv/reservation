@@ -1,5 +1,6 @@
 var FullCalendar = {
     lists : [],
+    defaultDate : Date.now(),
     set:function(events) {
         this.lists = events;
     },
@@ -18,7 +19,7 @@ var FullCalendar = {
         center: 'title',
         right: 'month,agendaWeek,agendaDay,listWeek'
       },
-      defaultDate: '2018-03-12',
+      defaultDate: this.defaultDate, 
       navLinks: true, // can click day/week names to navigate views
       editable: true,
       eventLimit: true, // allow "more" link when too many events
@@ -26,5 +27,5 @@ var FullCalendar = {
 
     });
 
-    } 
+    }
 }
